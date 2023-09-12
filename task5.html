@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet"  href="task7.css">
+    <title>Registration Form</title>
+    <style>
+        /* Form container styles */
+        .container {
+            border: 2px solid #333;
+            padding: 20px;
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        /* Form field styles */
+        label, input, select {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Progress bar styles */
+        .progress-container {
+            margin-top: 20px;
+            border: 2px solid #333;
+            padding: 10px;
+        }
+
+        .progress-bar {
+            background-color: lightblue;
+            height: 20px;
+            width: 0%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form>
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name">
+
+            <label for="last_name">Last Name:</label>
+            <input type="text" id="last_name" name="last_name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="phone_number">Phone Number:</label>
+            <input type="tel" id="phone_number" name="phone_number">
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+
+            <label for="confirm_password">Confirm Password:</label>
+            <input type="password" id="confirm_password" name="confirm_password">
+
+            <label for="birthdate">Date of Birth:</label>
+            <input type="date" id="birthdate" name="birthdate">
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="languages_known">Languages Known:</label>
+            <input type="text" id="languages_known" name="languages_known">
+
+            <label for="declaration">Declaration:</label>
+            <input type="checkbox" id="declaration" name="declaration"> I agree to the terms and conditions.
+
+            <input type="submit" value="Register">
+        </form>
+    </div>
+
+    <!-- Progress bar -->
+    <div class="progress-container">
+        <div class="progress-bar"></div>
+    </div>
+
+    <script>
+        // JavaScript to update the progress bar
+        const form = document.querySelector('form');
+        const progressBar = document.querySelector('.progress-bar');
+
+        form.addEventListener('input', updateProgressBar);
+
+        function updateProgressBar() {
+            const inputs = form.querySelectorAll('input');
+            const completedInputs = Array.from(inputs).filter(input => input.value.trim() !== '');
+
+            const progress = (completedInputs.length / inputs.length) * 100;
+            progressBar.style.width = `${progress}%`;
+        }
+    </script>
+</body>
+</html>
