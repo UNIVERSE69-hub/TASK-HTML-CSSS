@@ -1,0 +1,10 @@
+<link rel="stylesheet"  href="task1.html">
+<link rel="stylesheet"  href="task2.html">
+<link rel="stylesheet"  href="task2.1.html">
+<link rel="stylesheet"  href="task3.html">
+<link rel="stylesheet"  href="task3.1.html">
+<link rel="stylesheet"  href="task4.html">
+<link rel="stylesheet"  href="task4.1.html">
+<link rel="stylesheet"  href="task5.html">
+<link rel="stylesheet"  href="task5.1.html">
+<link rel="stylesheet"  href="task6.1.html">
